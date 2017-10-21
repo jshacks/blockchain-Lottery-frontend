@@ -1,3 +1,42 @@
+body{
+  background-color: #262626;
+}
+.main{
+    background-color: #404040;
+    color: silver;
+}
+
+/*table*/
+table{
+  width: 100%;
+  font-size: 10px;
+  --margin-left: 10px;
+  --margin-right: 5px;
+  --margin: 5px;
+  display: inline-table;
+}
+.table-bordered > thead > tr > th{
+  border:1px solid black;
+}
+.table-bordered > tbody > tr > td{
+  border:1px solid black;
+}
+.table-striped > tbody > tr:nth-child(2n+1) > td, .table-striped > tbody > tr:nth-child(2n+1) > th {
+   background-color: #262626;
+   color: silver;
+}
+.table-striped > tbody > tr:nth-child(2n) > td, .table-striped > tbody > tr:nth-child(2n+1) > th {
+   background-color: #474747;
+   color: silver;
+}
+th{
+  background-color: orange;
+  color:black;
+}
+
+#partBtn{
+  width: 100%;
+}
 
 .navbar{
   margin:0;

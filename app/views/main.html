@@ -1,3 +1,35 @@
 <div class="main">
   ASD {{x}}{{y}}
+  <button class="btn btn-success" ng-click="post();">POST-TEST</button>
+  <div>
+   <table id="statTable" class="table-striped table-bordered table-condensed">
+    <thead>
+      <th>
+        Lottery Name:
+      </th>
+      <th>
+        Status:
+      </th>
+      <th>
+        No. of Gamblers:
+      </th>
+      <th>
+        Redemption:
+      </th>
+      <th>
+        Participate:
+      </th>
+    </thead>
+    <tbody>
+      <tr ng-repeat="lot in lots">
+        <td>{{lot.name}}</td>
+        <td>{{lot.status}}</td>
+        <td>{{lot.pop}}</td>
+        <td>{{lot.endTime}}</td>
+        <td><button class="btn btn-warning" id="partBtn"><a href="{{lot.partHref}}"><i class="fa fa-bitcoin"></i></a></button></td>
+      </tr>
+    </tbody>
+  </table>
+ </div>
+
 </div>
