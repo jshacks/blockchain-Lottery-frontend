@@ -22,13 +22,13 @@ angular.module('frontApp')
 
     $http({
       method: 'GET',
-      url: '/someUrl'
+      url: 'http://demo8719677.mockable.io/getaddress'
     }).then(function successCallback(response) {
       //$scope.lots = response.data;
-      $scope.qrHash = response.data;
+      $scope.qrHash = response.data.address;
 
       console.log("am primit asta");
-      console.log(response);
+      console.log(response.data.address);
     }, function errorCallback(response) {
       console.log(response);
     });

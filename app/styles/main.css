@@ -6,6 +6,8 @@ body{
     color: silver;
 }
 .qrcode{
+  margin: auto;
+
   --width: 50%;
 }
 
