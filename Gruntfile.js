@@ -89,6 +89,10 @@ module.exports = function (grunt) {
                 '/app/styles',
                 connect.static('./app/styles')
               ),
+              connect().use(
+                '/node_modules',
+                connect.static('./node_modules')
+              ),
               connect.static(appConfig.app)
             ];
           }

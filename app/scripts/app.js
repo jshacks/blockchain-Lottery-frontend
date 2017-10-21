@@ -15,7 +15,8 @@ angular
     'ngResource',
     'ngRoute',
     'ngSanitize',
-    'ngTouch'
+    'ngTouch',
+    'monospaced.qrcode'
   ])
   .config(function ($routeProvider) {
     $routeProvider

@@ -14,6 +14,10 @@ angular.module('frontApp')
     $scope.y = $scope.x + 7;
     $scope.lots = [{name: 'aurel', status: 'off', partHref: "https:\\www.google.com"},{name: "numarul 2", status: '78'}]
 
+
+
+
+
     //192.168.1.58/api/signup
     //$http.defaults.headers.post["Content-Type"] = "application/x-www-form-urlencoded";
 
