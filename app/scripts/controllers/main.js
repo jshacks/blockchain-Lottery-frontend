@@ -9,9 +9,11 @@
  */
 
 angular.module('frontApp')
-  .controller('MainCtrl', function ($scope, $http) {
-    $scope.lots = [{name: 'aurel', status: 'off', partHref: "https:\\www.google.com"},{name: "numarul 2", status: '78'}]
+  .controller('MainCtrl', function ($scope, $http, $rootScope) {
+    $rootScope.light1 = "active";
+    $rootScope.light2 = "iactive";
 
+    $scope.lots = [{name: 'aurel', status: 'off', partHref: "https:\\www.google.com"},{name: "numarul 2", status: '78'}]
     $scope.qrHash = "asd";
 
 
@@ -19,19 +21,23 @@ angular.module('frontApp')
 
     //192.168.1.58/api/signup
     //$http.defaults.headers.post["Content-Type"] = "application/x-www-form-urlencoded";
+    $scope.get = function(){
 
-    $http({
-      method: 'GET',
-      url: 'http://demo8719677.mockable.io/getaddress'
-    }).then(function successCallback(response) {
-      //$scope.lots = response.data;
-      $scope.qrHash = response.data.address;
+          $http({
+            method: 'GET',
+            url: 'http://demo8719677.mockable.io/getaddress'
+          }).then(function successCallback(response) {
+            //$scope.lots = response.data;
+            $scope.qrHash = response.data.address;
 
-      console.log("am primit asta");
-      console.log(response.data.address);
-    }, function errorCallback(response) {
-      console.log(response);
-    });
+            console.log("am primit asta");
+            console.log(response.data.address);
+          }, function errorCallback(response) {
+            console.log(response);
+          });
+
+    }
+    $scope.get();
 
     $scope.post = function(){
       console.log('click');

@@ -6,9 +6,10 @@ body{
     color: silver;
 }
 .qrcode{
-  margin: auto;
+  display: block;
+  margin: 0 auto;
 
-  --width: 50%;
+  width: 25%;
 }
 
 /*table*/

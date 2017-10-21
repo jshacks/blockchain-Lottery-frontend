@@ -8,10 +8,8 @@
  * Controller of the frontApp
  */
 angular.module('frontApp')
-  .controller('AboutCtrl', function () {
-    this.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
+  .controller('AboutCtrl', function ($scope, $rootScope) {
+    $rootScope.light1 = "iactive";
+    $rootScope.light2 = "active";
+    
   });
