@@ -5,6 +5,9 @@ body{
     background-color: #404040;
     color: silver;
 }
+.qrcode{
+  --width: 50%;
+}
 
 /*table*/
 table{

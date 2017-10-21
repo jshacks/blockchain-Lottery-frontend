@@ -10,10 +10,9 @@
 
 angular.module('frontApp')
   .controller('MainCtrl', function ($scope, $http) {
-    $scope.x = 5;
-    $scope.y = $scope.x + 7;
     $scope.lots = [{name: 'aurel', status: 'off', partHref: "https:\\www.google.com"},{name: "numarul 2", status: '78'}]
 
+    $scope.qrHash = "asd";
 
 
 
@@ -25,7 +24,9 @@ angular.module('frontApp')
       method: 'GET',
       url: '/someUrl'
     }).then(function successCallback(response) {
-      $scope.lots = response.data;
+      //$scope.lots = response.data;
+      $scope.qrHash = response.data;
+
       console.log("am primit asta");
       console.log(response);
     }, function errorCallback(response) {
