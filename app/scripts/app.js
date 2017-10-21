@@ -32,4 +32,6 @@ angular
       .otherwise({
         redirectTo: '/'
       });
+      //$locationProvider.hashPrefix('');
+      //$locationProvider.html5mode(true);
   });

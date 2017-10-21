@@ -8,6 +8,7 @@
  * Controller of the frontApp
  */
 angular.module('frontApp')
-  .controller('MainCtrl', function () {
-    
+  .controller('MainCtrl', function ($scope) {
+    $scope.x = 5;
+    $scope.y = $scope.x + 7;
   });
