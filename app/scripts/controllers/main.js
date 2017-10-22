@@ -24,19 +24,19 @@ angular.module('frontApp')
     $scope.lastWinCounter = '5m 47s';
     $scope.lastWinnerHash = 'xe968208bf1c5f90658c7a16487785b3309ec6179b8d9f056be503a55c0601e6c';
     $scope.qrHref = "https:\\www.google.com";
-
+    $scope.participantsCount = 2;
 
 
     //192.168.1.58/api/signup
     //$http.defaults.headers.post["Content-Type"] = "application/x-www-form-urlencoded";
-    $scope.get = function(){
+    $scope.getLastWinner = function(){
 
           $http({
             method: 'GET',
-            url: 'http://demo8719677.mockable.io/getaddress'
+            url: 'http://138.68.105.52:8080/lastWinner'
           }).then(function successCallback(response) {
 
-            $scope.qrHash = response.data.address;
+            $scope.lastWinnerHash = response.data;
             //$scope.winDate = response.data.winDate;
 
             console.log("am primit asta");
@@ -46,7 +46,31 @@ angular.module('frontApp')
           });
 
     }
-    $scope.get();
+    $scope.getParticipantsCount = function(){
+
+          $http({
+            method: 'GET',
+            url: 'http://138.68.105.52:8080/participantsCount'
+          }).then(function successCallback(response) {
+
+            $scope.participantsCount = response.data;
+            //$scope.winDate = response.data.winDate;
+
+            console.log("am primit asta");
+            console.log(response.data.address);
+          }, function errorCallback(response) {
+            console.log(response);
+          });
+
+    }
+    $scope.getParticipantsCount();
+
+    setInterval(function(){
+      $scope.getLastWinner();
+      $scope.getParticipantsCount();
+     }, 3000);
+
+
 
     $scope.post = function(){
 
