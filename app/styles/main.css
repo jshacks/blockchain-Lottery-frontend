@@ -31,7 +31,7 @@ button{
   display: block;
   margin: 0 auto;
   margin-top: 15px;
-  width: 30%;
+  --width: 30%;
 }
 #nine{
   display: block;
