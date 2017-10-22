@@ -19,8 +19,10 @@ angular.module('frontApp')
     //main page vars
     $scope.winDate = '15:00 GMT, October 22nd';
     $scope.prize = 0.042;
-    $scope.price = 0.01;
+    $scope.price = 1.00;
     $scope.noTickets = 14;
+    $scope.lastWinCounter = '5m 47s';
+    $scope.lastWinnerHash = 'xe968208bf1c5f90658c7a16487785b3309ec6179b8d9f056be503a55c0601e6c';
 
 
 

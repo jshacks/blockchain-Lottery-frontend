@@ -2,3 +2,9 @@
   background-color: rgba(0,0,0,0);
   border-color: #2dfecf;
 }
+.btn-success{
+  background-color:rgba(50,205,50,0.2);
+}
+.row{
+  margin-top: 50px;
+}
