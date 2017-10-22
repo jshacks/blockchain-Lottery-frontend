@@ -21,10 +21,12 @@ angular.module('frontApp')
     $scope.prize = 0;
     $scope.price = 1.00;
     $scope.noTickets = 0;
-    $scope.lastWinCounter = '5m 47s';
+    $scope.lastWinCounter = '-';
     $scope.lastWinnerHash = '0x83aedfffd13c42b6e91ef6569e3823ed55ae58ce';
     $scope.qrHref = "https:\\www.google.com";
     $scope.participantsCount = 2;
+
+    var date = 0;
 
 
     //192.168.1.58/api/signup
@@ -36,8 +38,14 @@ angular.module('frontApp')
             url: 'http://138.68.105.52:8080/lastWinner'
           }).then(function successCallback(response) {
 
+            if($scope.lastWinnerHash != response.data) {
+            var currentDate = new Date();
+            $scope.lastWinCounter = currentDate.getFullYear() + "/" + currentDate.getMonth() + "/" + currentDate.getDate() + " " + currentDate.getHours() + ":" + currentDate.getMinutes();
+          }
+          
             $scope.lastWinnerHash = response.data;
             //$scope.winDate = response.data.winDate;
+
 
             console.log("am primit asta");
             console.log(response.data.address);
@@ -70,6 +78,10 @@ angular.module('frontApp')
       $scope.getParticipantsCount();
       $scope.noTickets = 10 - $scope.participantsCount;
       $scope.prize = $scope.participantsCount;
+
+
+
+      //(new Date()).toISOString()
      }, 3000);
 
 
