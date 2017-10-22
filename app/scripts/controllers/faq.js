@@ -8,7 +8,7 @@
  * Controller of the frontApp
  */
 angular.module('frontApp')
-  .controller('FaqCtrl', function () {
+  .controller('FaqCtrl', function ($scope, $rootScope) {
     $rootScope.light1 = "iactive";
     $rootScope.light2 = "iactive";
     $rootScope.light3 = "active";
