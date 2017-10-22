@@ -64,4 +64,5 @@ angular.module('frontApp')
 
    $rootScope.light1 = "active";
    $rootScope.light2 = "iactive";
+   $rootScope.light3 = "iactive";
   });

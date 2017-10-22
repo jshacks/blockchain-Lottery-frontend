@@ -9,6 +9,11 @@ button{
   background-color:rgba(50,205,50,0.2);
 }
 
+.active a{
+  color:#2dfecf !important;
+  background-color: rgba(0,0,0,0) !important;
+}
+
 #overlay {
     position: fixed;
     display: block;
@@ -18,7 +23,7 @@ button{
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(7,15,24,0.9);
+    background-color: rgba(7,15,24,0.7);
     z-index: -1;
     cursor: pointer;
 }

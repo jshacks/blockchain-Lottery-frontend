@@ -11,6 +11,7 @@ angular.module('frontApp')
   .controller('AboutCtrl', function ($scope, $rootScope) {
     $rootScope.light1 = "iactive";
     $rootScope.light2 = "active";
+    $rootScope.light3 = "iactive";
 
     $scope.newsMail = "    EMAIL";
   });

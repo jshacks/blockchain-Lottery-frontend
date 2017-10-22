@@ -9,9 +9,7 @@
  */
 angular.module('frontApp')
   .controller('FaqCtrl', function () {
-    this.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
+    $rootScope.light1 = "iactive";
+    $rootScope.light2 = "iactive";
+    $rootScope.light3 = "active";
   });
