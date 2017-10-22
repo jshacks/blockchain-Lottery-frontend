@@ -14,15 +14,15 @@ angular.module('frontApp')
 
     $scope.lots = [{name: 'aurel', status: 'off', partHref: "https:\\www.google.com"},{name: "numarul 2", status: '78'}]
     //$scope.qrHash = 'asd';
-    $scope.qrHash = "xe09ec6179b8d9f056be503a55c0601e6c968208bf1c5f90658c7a16487785b33";
+    $scope.qrHash = "0x83aedfffd13c42b6e91ef6569e3823ed55ae58ce";
 
     //main page vars
     $scope.winDate = '15:00 GMT, October 22nd';
-    $scope.prize = 0.042;
+    $scope.prize = 0;
     $scope.price = 1.00;
-    $scope.noTickets = 14;
+    $scope.noTickets = 0;
     $scope.lastWinCounter = '5m 47s';
-    $scope.lastWinnerHash = 'xe968208bf1c5f90658c7a16487785b3309ec6179b8d9f056be503a55c0601e6c';
+    $scope.lastWinnerHash = '0x83aedfffd13c42b6e91ef6569e3823ed55ae58ce';
     $scope.qrHref = "https:\\www.google.com";
     $scope.participantsCount = 2;
 
@@ -68,6 +68,8 @@ angular.module('frontApp')
     setInterval(function(){
       $scope.getLastWinner();
       $scope.getParticipantsCount();
+      $scope.noTickets = 10 - $scope.participantsCount;
+      $scope.prize = $scope.participantsCount;
      }, 3000);
 
 
