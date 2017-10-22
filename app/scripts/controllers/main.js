@@ -23,6 +23,7 @@ angular.module('frontApp')
     $scope.noTickets = 14;
     $scope.lastWinCounter = '5m 47s';
     $scope.lastWinnerHash = 'xe968208bf1c5f90658c7a16487785b3309ec6179b8d9f056be503a55c0601e6c';
+    $scope.qrHref = "https:\\www.google.com";
 
 
 
