@@ -1,10 +1,53 @@
 <div class="main">
+
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-6">
+          <span style="text-align: center;">
+            <p class="bigtxt">We bet we can<br /> save the world</p>
+            <p class="mdtxt">Buy JS Hacks Lottery Tickets.</p>
+            <p>The winner will be announced at:<br /></p>
+            <p class="cyan">{{winDate}}</p>
+            <p>70% OF THE TOTAL POT GOES TO THE WINNER</p>
+            <p>30% GOES TO GREEN PEACE</p>
+          </span>
+      </div>
+
+
+      <div class="col-sm-6">
+                  <div class="row">
+                    <div class="col-xs-4">
+                        <span>
+                          <p style="margin: 0;">Current Prize</p>
+                          <p class="mdtxt cyan">{{prize}} ETH</p>
+                        </span>
+                      </div>
+                      <div class="col-xs-4">
+                        <span>
+                          <p style="margin: 0;">Price/Ticket</p>
+                          <p class="mdtxt cyan">{{price}} ETH</p>
+                        </span>
+                      </div>
+                        <span>
+                          <p style="margin: 0;">Tickets Left</p>
+                          <p class="mdtxt cyan">{{noTickets}}</p>
+                        </span>
+                    </div>
+
+
+          <qrcode id="qr1" data="{{qrHash}}" download></qrcode>
+
+          <p class="smtxt cyan">{{qrHash}}</p>
+
+        </div>
+    </div>
+
+  </div>
+
   <!--
   <button class="btn btn-success" ng-click="post();">POST-TEST</button>
   -->
-  
-  <qrcode data="{{qrHash}}" download></qrcode>
-
+  <!--
   <div>
    <table id="statTable" class="table-striped table-bordered table-condensed">
     <thead>
@@ -35,5 +78,7 @@
     </tbody>
   </table>
  </div>
+-->
+
 
 </div>

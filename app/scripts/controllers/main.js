@@ -10,12 +10,17 @@
 
 angular.module('frontApp')
   .controller('MainCtrl', function ($scope, $http, $rootScope) {
-    $rootScope.light1 = "active";
-    $rootScope.light2 = "iactive";
+
 
     $scope.lots = [{name: 'aurel', status: 'off', partHref: "https:\\www.google.com"},{name: "numarul 2", status: '78'}]
-    $scope.qrHash = "asd";
+    //$scope.qrHash = 'asd';
+    $scope.qrHash = "xe09ec6179b8d9f056be503a55c0601e6c968208bf1c5f90658c7a16487785b33";
 
+    //main page vars
+    $scope.winDate = '15:00 GMT, October 22nd';
+    $scope.prize = 0.042;
+    $scope.price = 0.01;
+    $scope.noTickets = 14;
 
 
 
@@ -27,8 +32,9 @@ angular.module('frontApp')
             method: 'GET',
             url: 'http://demo8719677.mockable.io/getaddress'
           }).then(function successCallback(response) {
-            //$scope.lots = response.data;
+
             $scope.qrHash = response.data.address;
+            //$scope.winDate = response.data.winDate;
 
             console.log("am primit asta");
             console.log(response.data.address);
@@ -40,20 +46,6 @@ angular.module('frontApp')
     $scope.get();
 
     $scope.post = function(){
-      console.log('click');
-        //var data = {email: "email@service.com", password: "melciScoiciRaciCraci"};
-
-        /*
-        var data = $.param({
-              email: "email@service.com",
-              password: "melciScoiciRaciCraci"
-        });*/
-        /*
-        var config = {
-            headers : {
-                'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8;'
-            }
-        }*/
 
         var req = {
             method: 'POST',
@@ -62,12 +54,12 @@ angular.module('frontApp')
             }
         $http(req).then(function(response){console.log(response); console.log('Blanao');}, function(response){console.log(response); console.log('NO POST')});
 
-        /*
-        $http.post('192.168.1.58:8080/api/signup', data, config)
-              .then(function(){console.log("success")},function(){console.log('FAIL');})*/
-
    }
 
 
 
+
+
+   $rootScope.light1 = "active";
+   $rootScope.light2 = "iactive";
   });
